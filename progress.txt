@@ -138,3 +138,27 @@
   - Last chapter (afterword) has `next: false`
   - First chapter (preface) has `prev: false`
 ---
+
+## 2026-03-25 - US-008
+- Implemented: Created Part 2 chapter Markdown files (05-11)
+- Files created:
+  - `docs/chapters/05-arrival.md` (4 image insertion points)
+  - `docs/chapters/06-farewell.md` (1 image point, minimalist)
+  - `docs/chapters/07-snowcity.md` (3 image insertion points)
+  - `docs/chapters/08-tsangyang.md` (1 image point, 2 images)
+  - `docs/chapters/09-drepung.md` (3 points: double + full-width + double)
+  - `docs/chapters/10-teahouse.md` (2 image insertion points)
+  - `docs/chapters/11-namtso.md` (4 points: full-width + double + full-width + double)
+- All chapters include:
+  - Correct frontmatter (title, chapter, part, partName, date, location, heroImage, prev, next)
+  - `<ChapterHeader />` component
+  - `<Divider />` for section breaks
+  - Image components as specified
+  - Chapter navigation with prev/next links
+- **Learnings for future iterations:**
+  - Part 2 covers "拉萨" (Lhasa) chapters, focusing on life in the holy city
+  - Image insertion points vary by chapter content and narrative needs
+  - FullWidthImage used for panoramic landscape shots (namtso-sunrise, namtso-peninsula, drepung-debate)
+  - Some chapters intentionally minimal (06-farewell) for emotional effect
+  - Consistent pattern: each chapter ends with [上一章：← ...](./prev) | [下一章：... →](./next)
+---
