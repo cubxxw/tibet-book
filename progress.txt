@@ -1,0 +1,23 @@
+## Codebase Patterns
+- Use `pnpm` as package manager (not npm or yarn)
+- TypeScript typecheck: `npx tsc --noEmit`
+- VitePress dev server: `pnpm dev`
+- Build command: `pnpm build`
+- Vue components use `<script setup>` syntax
+- Frontmatter props accessed via `useData()` in Vue components
+- CSS variables follow `--vp-*` and `--color-*` naming conventions
+- Chapter numbering uses Chinese numerals array lookup
+---
+
+## 2026-03-25 - US-001
+- Implemented: Configured VitePress config.ts with site metadata
+- Files changed:
+  - `tsconfig.json` (created)
+  - `docs/.vitepress/vite-env.d.ts` (created)
+  - `package.json` (added typescript dev dependency)
+- **Learnings for future iterations:**
+  - TypeScript requires vitepress types declaration in tsconfig.json
+  - Vue component imports in .ts files need `declare module '*.vue'` in vite-env.d.ts
+  - CSS imports need `declare module '*.css'` for typecheck to pass
+  - Use `npx tsc --noEmit` for type checking before commits
+---

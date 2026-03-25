@@ -1,0 +1,213 @@
+{
+  "project": "减法之地",
+  "branchName": "ralph/jianfa-vitepress-book",
+  "description": "将《减法之地·川西入藏·拉萨旅居手记》深度嵌入 VitePress，打造优雅、高级、内容至上的在线文学阅读体验",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "配置 VitePress config.ts 与站点元信息",
+      "description": "As a developer, I need to rewrite config.ts with the correct site metadata, navigation, sidebar, and Google Fonts so the site reflects the book structure.",
+      "acceptanceCriteria": [
+        "lang 设为 zh-CN，title 为 '减法之地'，titleTemplate 为 ':title — 减法之地'",
+        "head 中包含 og:title、og:description、og:type (book) 元标签",
+        "head 中包含 Google Fonts preconnect 和 Noto Serif SC / Noto Sans SC 字体链接",
+        "侧边栏包含序言、第一部分（4章）、第二部分（7章）、第三部分（2章）、尾声、后记",
+        "导航栏包含首页、旅程地图、关于三个入口",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "创建自定义主题入口和全局 CSS 变量",
+      "description": "As a developer, I need to set up the VitePress custom theme entry (index.ts) and global CSS (custom.css) with the Tibetan-inspired design system variables.",
+      "acceptanceCriteria": [
+        "docs/.vitepress/theme/index.ts 创建，extends DefaultTheme，全局注册所有自定义组件",
+        "docs/.vitepress/theme/custom.css 创建，包含 :root CSS 变量（主色 #2C5F7C、强调色 #C4933F、背景 #FAFAF8 等）",
+        "custom.css 包含字体变量（--font-body Noto Serif SC、--font-heading Noto Sans SC、--font-quote STKaiti）",
+        "custom.css 包含排版变量（--font-size-body: 17px、--line-height-body: 1.9、--max-width-content: 680px、--paragraph-indent: 2em）",
+        "custom.css 覆盖 .vp-doc 最大宽度为 680px",
+        "custom.css 包含正文 p 标签首行缩进、两端对齐样式",
+        "custom.css 包含 blockquote 楷体、暖色背景样式",
+        "custom.css 包含暗色模式变量",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "创建 ChapterHeader.vue 组件",
+      "description": "As a developer, I need a ChapterHeader component that reads frontmatter and renders the chapter number, title, date, location, and hero image at the top of each chapter page.",
+      "acceptanceCriteria": [
+        "docs/.vitepress/theme/components/ChapterHeader.vue 创建",
+        "从 frontmatter 读取 title、chapter、part、partName、date、location、heroImage、excerpt",
+        "渲染章节编号（第N章）、标题、日期+地点、全宽 heroImage、题记 excerpt",
+        "heroImage 使用 loading='eager' 和 fetchpriority='high'",
+        "日期标注右对齐，楷体灰色",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-004",
+      "title": "创建 ImageWithCaption.vue 和 FullWidthImage.vue 组件",
+      "description": "As a developer, I need image components: one for inline images with captions within the content column, and one that breaks out to full browser width.",
+      "acceptanceCriteria": [
+        "docs/.vitepress/theme/components/ImageWithCaption.vue 创建，接收 src、alt、caption props",
+        "ImageWithCaption 图注 < 10px 灰色楷体，位于图片下方",
+        "docs/.vitepress/theme/components/FullWidthImage.vue 创建，接收 src、alt、caption props",
+        "FullWidthImage 突破 680px 内容区，宽度撑至 100vw，负 margin 或 position 实现",
+        "两个组件均使用 loading='lazy' 默认，FullWidthImage 支持 eager prop",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-005",
+      "title": "创建 PhotoGallery.vue、QuoteBlock.vue、Divider.vue、ReadingProgress.vue 组件",
+      "description": "As a developer, I need the remaining reusable components: a masonry/grid gallery for 4+ photos, a styled quote block, a chapter section divider, and a reading progress bar.",
+      "acceptanceCriteria": [
+        "docs/.vitepress/theme/components/PhotoGallery.vue 创建，接收 images 数组（每项含 src、alt、caption），CSS grid 布局，lazy load",
+        "docs/.vitepress/theme/components/QuoteBlock.vue 创建，接收 content、attribution props，楷体暖色背景",
+        "docs/.vitepress/theme/components/Divider.vue 创建，渲染居中 '——' 分隔符，上下各 2em 间距",
+        "docs/.vitepress/theme/components/ReadingProgress.vue 创建，顶部固定细线，随滚动更新 width",
+        "ReadingProgress 在 onMounted 监听 scroll 事件，onUnmounted 移除",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-006",
+      "title": "重写 docs/index.md 首页",
+      "description": "As a reader, I want a full-screen immersive homepage that shows the book title, epigraph, journey overview, and chapter structure — not the default VitePress hero.",
+      "acceptanceCriteria": [
+        "docs/index.md 重写，不使用 VitePress 默认 hero layout",
+        "首页包含全屏背景图区域（纳木错大图）、书名'减法之地'、副标题、'37天·39个停留·7354公里'",
+        "包含题记引用块：'知识在这里不是积累，而是减法。——写于哲蚌寺辨经院'",
+        "包含旅程路线文字概览（武汉→成都→三星堆→...→拉萨→纳木错→重庆）",
+        "包含三部分结构预览：天路4章、拉萨7章、减法2章",
+        "包含'开始阅读'按钮链接到序言",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-007",
+      "title": "创建序言和第一部分章节 Markdown 文件（序言、第1-4章）",
+      "description": "As a developer, I need to create the markdown files for the preface and Part 1 chapters with correct frontmatter, ChapterHeader, Divider usage, and image insertion points using placeholder image paths.",
+      "acceptanceCriteria": [
+        "docs/chapters/preface.md 创建，frontmatter 含 title/date/location/heroImage/prev/next，含 <ChapterHeader />，含正文占位符和图片插入点",
+        "docs/chapters/01-wuhan.md 创建，frontmatter chapter:1，heroImage: chengdu-city.webp，含3个插入点（双图+画廊×九寨沟+画廊×熊猫）",
+        "docs/chapters/02-sanxingdui.md 创建，frontmatter chapter:2，heroImage: sanxingdui-3.webp，含3个插入点（双图+画廊+双图）",
+        "docs/chapters/03-zheduo.md 创建，frontmatter chapter:3，heroImage: garze-road-3.webp，含4个插入点",
+        "docs/chapters/04-glacier.md 创建，frontmatter chapter:4，heroImage: glacier-7.webp，含5个插入点",
+        "所有章节末尾有上一章/下一章导航（使用 frontmatter prev/next）",
+        "Typecheck passes"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-008",
+      "title": "创建第二部分章节 Markdown 文件（第5-11章）",
+      "description": "As a developer, I need markdown files for all 7 Lhasa chapters with correct frontmatter, image insertion points, and chapter navigation.",
+      "acceptanceCriteria": [
+        "docs/chapters/05-arrival.md 创建，heroImage: road-to-lhasa-2.webp，含4个插入点",
+        "docs/chapters/06-farewell.md 创建，heroImage: lhasa-museum-2.webp，含1个插入点（克制留白）",
+        "docs/chapters/07-snowcity.md 创建，heroImage: shannan-lake-2.webp，含3个插入点",
+        "docs/chapters/08-tsangyang.md 创建，heroImage: jokhang-temple.webp，含1个插入点（2张）",
+        "docs/chapters/09-drepung.md 创建，heroImage: drepung-4.webp，含3个插入点（双图+全宽+双图）",
+        "docs/chapters/10-teahouse.md 创建，heroImage: lhasa-cityview-1.webp，含2个插入点",
+        "docs/chapters/11-namtso.md 创建，heroImage: namtso-3.webp，含4个插入点（全宽+双图+全宽+双图）",
+        "所有章节有正确的 prev/next frontmatter 链接",
+        "Typecheck passes"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-009",
+      "title": "创建第三部分及结尾章节 Markdown 文件（第12-13章、尾声、后记）",
+      "description": "As a developer, I need markdown files for Part 3 chapters and the ending sections.",
+      "acceptanceCriteria": [
+        "docs/chapters/12-fire.md 创建，heroImage: lhasa-museum-5.webp，含2个插入点（克制处理）",
+        "docs/chapters/13-gifts.md 创建，heroImage: sera-3.webp，含3个插入点（双图+全宽+画廊）",
+        "docs/chapters/epilogue.md 创建，heroImage: flight-aerial.webp，含1个插入点",
+        "docs/chapters/afterword.md 创建，无 heroImage，含1个末尾双图插入点",
+        "所有章节有正确的 prev/next 链接，afterword 的 next 为空",
+        "Typecheck passes"
+      ],
+      "priority": 9,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-010",
+      "title": "创建 docs/about.md 关于页",
+      "description": "As a reader, I want an about page that explains the book's origin, the author's background, key statistics, and acknowledgements.",
+      "acceptanceCriteria": [
+        "docs/about.md 创建",
+        "包含书的缘起说明",
+        "包含作者介绍（技术背景+旅行者身份）",
+        "包含数据概览：37天 / 7354公里 / 39个停留",
+        "包含致谢：小兔子、摄影大哥、贡嘎机场司机等",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 10,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-011",
+      "title": "创建 docs/journey-map.md 旅程地图页（静态版）",
+      "description": "As a reader, I want a journey map page showing the complete route as a static visual with key stop names, since the interactive Mapbox version requires GPS data not yet available.",
+      "acceptanceCriteria": [
+        "docs/journey-map.md 创建",
+        "包含旅程路线文字时间轴：武汉→成都→三星堆→九寨沟→折多山→理塘→芒康→72拐→来古冰川→林芝→拉萨→山南→纳木错→重庆",
+        "每个节点包含地名、对应章节链接",
+        "页面包含说明文字（'完整互动地图将在 GPS 数据就绪后上线'）",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 11,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-012",
+      "title": "删除旧章节文件并验证站点构建",
+      "description": "As a developer, I need to remove the old chapter structure and verify the site builds without errors.",
+      "acceptanceCriteria": [
+        "删除 docs/chapters/02-adaptation.md、03-daily-life.md、04-temples.md、05-people.md、06-time.md、07-belief.md、08-modernity.md、09-kora.md（旧结构文件）",
+        "docs/chapters/01-arrival.md 如存在则删除（已被 01-wuhan.md 替代）",
+        "运行 pnpm build 无错误",
+        "运行 pnpm dev 服务器正常启动",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}

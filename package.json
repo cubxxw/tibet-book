@@ -1,6 +1,7 @@
 {
   "name": "tibet-book",
   "version": "1.0.0",
+  "type": "module",
   "description": "拉萨四个月：在世界屋脊上寻找自己",
   "scripts": {
     "dev": "vitepress dev docs",
@@ -8,6 +9,7 @@
     "preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "typescript": "^6.0.2",
     "vitepress": "^1.6.4"
   }
 }
