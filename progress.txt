@@ -63,3 +63,24 @@
   - FullWidthImage now supports :eager prop to switch to loading="eager"
   - Caption styles use var(--font-quote) for 楷体 and var(--color-text-date) for gray color
 ---
+
+## 2026-03-25 - US-005
+- Implemented: PhotoGallery, QuoteBlock, Divider, ReadingProgress components
+- Files changed:
+  - `docs/.vitepress/theme/components/PhotoGallery.vue` (created)
+  - `docs/.vitepress/theme/components/QuoteBlock.vue` (updated)
+  - `docs/.vitepress/theme/components/Divider.vue` (updated)
+  - `docs/.vitepress/theme/index.ts` (updated to register PhotoGallery)
+- Changes made:
+  - Created PhotoGallery.vue with CSS grid layout, images array prop, lazy loading
+  - Added `content` prop to QuoteBlock.vue (still supports slot fallback)
+  - Fixed Divider.vue margin to 2em (上下各 2em 间距)
+  - ReadingProgress.vue already correct (onMounted scroll, onUnmounted cleanup)
+- **Learnings for future iterations:**
+  - PhotoGallery uses CSS grid with auto-fit and minmax(250px, 1fr) for responsive layout
+  - PhotoGallery receives `images: { src, alt, caption }[]` prop
+  - QuoteBlock supports both `content` prop and default slot for flexibility
+  - Divider renders centered '——' with 2em top/bottom margin
+  - ReadingProgress uses ref for reactive progress, onMounted/onUnmounted for lifecycle
+  - All components registered globally in theme/index.ts via app.component()
+---
