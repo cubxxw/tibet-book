@@ -185,3 +185,24 @@
   - afterword.md `next: false` since it's the last chapter
   - Consistent closing pattern: [上一章：← ...](./prev) for last chapter
 ---
+
+## 2026-03-25 - US-010
+- Implemented: Created docs/about.md about page
+- Files changed:
+  - `docs/about.md` (completely rewritten)
+- Changes made:
+  - Added book origin story (缘起)
+  - Added author background (technical background + traveler identity)
+  - Added journey statistics: 37 days / 7354 km / 39 stops / 4 months
+  - Added journey route overview
+  - Added acknowledgements: 小兔子，摄影大哥，贡嘎机场司机，etc.
+  - Added contact information section
+  - Added CSS grid for stats display with responsive design
+- **Learnings for future iterations:**
+  - About page uses `layout: page` frontmatter (not `layout: home`)
+  - Stats grid uses CSS grid with `repeat(auto-fit, minmax(150px, 1fr))` for responsive layout
+  - Stats display uses large numbers with labels and descriptions
+  - Acknowledgements section lists specific people who helped
+  - Contact section includes GitHub and email placeholders
+  - Page ends with the book's core philosophy quote
+---
