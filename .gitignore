@@ -12,9 +12,16 @@ Thumbs.db
 # 编辑器
 .vscode/
 .idea/
+.qodo/
 *.swp
 *.swo
 *~
+
+# 原始照片/媒体文件
+chengdu-tibet-318/
+
+# 文档草稿
+*.docx
 
 # 环境变量
 .env

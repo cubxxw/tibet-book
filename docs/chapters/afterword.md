@@ -3,66 +3,66 @@ title: 后记
 chapter: 15
 part: 3
 partName: 后记
-date: 2025-09-15
-location: 武汉
-heroImage: false
-excerpt: 谨以此书，献给所有在路上的灵魂。
-prev: /chapters/epilogue
-next: false
+date: 2026-03-10
+location: 重庆
+heroImage: /images/lhasa-memory-final-1.webp
+excerpt: 减法很难，但值得。
+prev: /chapters/13-gifts
+prevTitle: 十三 · 高原的馈赠
+next: /chapters/epilogue
+nextTitle: 尾声 · 出发的理由
 ---
 
 <script setup>
 import ChapterHeader from '../.vitepress/theme/components/ChapterHeader.vue'
+import ChapterNav from '../.vitepress/theme/components/ChapterNav.vue'
 import Divider from '../.vitepress/theme/components/Divider.vue'
 import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vue'
+import QuoteBlock from '../.vitepress/theme/components/QuoteBlock.vue'
 </script>
 
 <ChapterHeader />
 
-## 回到原点
+这本书里的所有人物，都是真实的。
 
-回到武汉，已经是秋天。
+<Divider />
 
-机场还是那个机场，但我知道，有些东西不一样了。
+**小兔子**看到这里，应该正在笑。如果你在飞机上读这本书，希望这一段可以给你打发一些时间。谢谢你当那个引路人。谢谢你说了那句"我们去西藏吧"。
 
-行李里多了几件从拉萨带回来的东西——一块从纳木错捡的石头，一本在八廓街买的经书，一张在哲蚌寺拍的照片。
+**川西的摄影大哥**，你让我在这段旅途里对镜头的使用方式有了新的理解。谢谢。
+
+**那位在湘菜馆遇到的摄影姐姐**，你从大理到拉萨的故事里有一种让人敬佩的韧性。希望你越来越好。
+
+**哲蚌寺的那两个辩经结束后相拥的僧侣**，你们不认识我，但谢谢你们那个下午给我看到的东西。
+
+**贡嘎机场路上的司机大哥**，谢谢你那句"那就好好写"。
 
 <ImageWithCaption
   src="/images/lhasa-memory-final-1.webp"
-  alt="从拉萨带回来的纪念品"
-  caption="从拉萨带回来的东西，每一样都有故事"
+  alt="拉萨的记忆"
+  caption="拉萨，那些没有被记录进 GPS 的时刻"
 />
 
-## 感谢
+<Divider />
 
-感谢小兔子，在我最犹豫的时候说：想去就去，工作可以等等，但青春不能。
+这本书在旅程结束之后花了一些时间整理。所有的材料——Polarsteps 的轨迹记录、每天的语音笔记、碎片化的文字、以及那封凌晨五点写给小兔子的信——都是真实发生过的事情。
 
-感谢摄影大哥，在来古冰川的清晨帮我拍下了最美的日出。
+写书的过程本身，也是一个减法的过程：从几万字的原始记录里，找到那些真正想说的，删掉那些只是为了撑场面的，留下来的，希望是实的。
 
-感谢贡嘎机场的司机师傅，一路上的故事比风景还精彩。
+减法很难，但值得。
 
-感谢所有在旅途中相遇的人，你们让这段旅程变得完整。
+就像哲蚌寺的辩经：不是添加，而是凿掉错误，让那个更实的东西，慢慢露出来。
 
 <ImageWithCaption
   src="/images/lhasa-memory-final-2.webp"
-  alt="旅途中的朋友"
-  caption="有些相遇，只有一次，但足以温暖余生"
+  alt="旅程的终点"
+  caption="重庆，旅程的终点也是新的起点"
 />
 
-<Divider />
-
-## 写在最后
-
-这本书，不是结束，而是开始。
-
-它记录的是一段旅程，但旅程还在继续。
-
-下一个目的地是哪里？我不知道。但我知道，只要还在路上，就还有故事发生。
-
-谨以此书，献给所有在路上的灵魂。
-
-扎西德勒。
+<QuoteBlock content="减法很难，但值得。" attribution="写于 2026 年，重庆" />
 
 <Divider />
 
-[上一章：← 尾声 · 出发的理由](./epilogue)
+——全文完——
+
+<ChapterNav />
