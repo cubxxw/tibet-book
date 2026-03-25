@@ -84,3 +84,23 @@
   - ReadingProgress uses ref for reactive progress, onMounted/onUnmounted for lifecycle
   - All components registered globally in theme/index.ts via app.component()
 ---
+
+## 2026-03-25 - US-006
+- Implemented: Rewrote docs/index.md homepage with custom immersive design
+- Files changed:
+  - `docs/index.md` (completely rewritten)
+- Changes made:
+  - Removed default VitePress hero layout, created custom homepage
+  - Added full-screen hero section with background image (纳木错), book title, subtitle, journey stats
+  - Added epigraph quote block: "知识在这里不是积累，而是减法。——写于哲蚌寺辨经院"
+  - Added journey route timeline: 武汉→成都→三星堆→...→拉萨→纳木错→重庆
+  - Added three-part book structure preview cards with links
+  - Added "开始阅读" button linking to preface
+- **Learnings for future iterations:**
+  - Can import Vue components in .md files using `<script setup>` block
+  - Hero section uses linear-gradient overlay on background image for text readability
+  - Journey route uses flexbox with flex-wrap for responsive layout
+  - Structure grid uses CSS grid with auto-fit minmax(280px, 1fr) for responsive cards
+  - All text uses CSS variables for consistent theming (font-heading, font-quote, colors)
+  - Note: Background image path is '/namtso-hero.webp' - needs to be added to public folder
+---
