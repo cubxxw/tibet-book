@@ -47,3 +47,19 @@
   - Hero image uses `loading="eager"` and `fetchpriority="high"` for performance
   - Date/location displayed right-aligned in italic 楷体 style
 ---
+
+## 2026-03-25 - US-004
+- Implemented: ImageWithCaption.vue and FullWidthImage.vue component fixes
+- Files changed:
+  - `docs/.vitepress/theme/components/ImageWithCaption.vue` (updated)
+  - `docs/.vitepress/theme/components/FullWidthImage.vue` (updated)
+- Changes made:
+  - Added `eager` prop to FullWidthImage.vue for eager loading support
+  - Changed ImageWithCaption caption font-size to 9px (< 10px requirement)
+- **Learnings for future iterations:**
+  - Both components use defineProps<{ src, alt?, caption? }>() for type-safe props
+  - ImageWithCaption uses loading="lazy" by default
+  - FullWidthImage uses negative margin calc(-50vw + 50%) to break out of 680px container
+  - FullWidthImage now supports :eager prop to switch to loading="eager"
+  - Caption styles use var(--font-quote) for 楷体 and var(--color-text-date) for gray color
+---
