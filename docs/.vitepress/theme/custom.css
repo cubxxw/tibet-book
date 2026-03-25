@@ -5,17 +5,21 @@
 
 /* ── 字体系统 ── */
 :root {
-  --font-body: 'Noto Serif SC', 'Source Han Serif SC', 'STSong',
-               'Songti SC', Georgia, serif;
+  /* 正文使用霞鹜文楷，营造温润书卷气 */
+  --font-body: 'LXGW WenKai', 'LXGW WenKai Screen', 'STKaiti', 'KaiTi',
+               'Noto Serif SC', 'Source Han Serif SC', serif;
+  /* 标题保留无衬线体，形成对比 */
   --font-heading: 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC',
                   'Microsoft YaHei', sans-serif;
-  --font-quote: 'STKaiti', 'KaiTi', 'Noto Serif SC', serif;
+  /* 引用与引言使用楷体 */
+  --font-quote: 'STKaiti', 'KaiTi', 'LXGW WenKai', 'Noto Serif SC', serif;
 
   /* 排版参数 */
   --content-max-width: 680px;
-  --font-size-body: 16.5px;
-  --line-height-body: 2;
-  --paragraph-indent: 2em;
+  --font-size-body: 17px;
+  --line-height-body: 1.9;
+  --paragraph-margin: 1.6em;
+  --paragraph-indent: 0;
 }
 
 /* ── 藏式色彩体系 ── */
@@ -64,9 +68,9 @@
   --vp-c-text-3: #6e6a64;
 }
 
-/* ── 全局背景微暖色 ── */
+/* ── 全局背景微暖色 · 纸张质感 ── */
 :root {
-  --vp-c-bg: #FAFAF8;
+  --vp-c-bg: #F9F9F7;
   --vp-c-bg-soft: #F5F3EF;
   --vp-c-bg-mute: #ECEAE4;
 }
@@ -119,18 +123,6 @@ body:has(.cinematic-home) {
   background: #030610 !important;
 }
 
-/* ── 全局背景微暖色 ── */
-:root {
-  --vp-c-bg: #FAFAF8;
-  --vp-c-bg-soft: #F5F3EF;
-  --vp-c-bg-mute: #ECEAE4;
-}
-.dark {
-  --vp-c-bg: #1A1D21;
-  --vp-c-bg-soft: #22252A;
-  --vp-c-bg-mute: #2A2D34;
-}
-
 /* ═══════════════════════════════════════════════
    正文排版 · 核心
    ═══════════════════════════════════════════════ */
@@ -168,15 +160,19 @@ body:has(.cinematic-home) {
   border-left: none !important;
 }
 
-/* 正文段落 */
+/* 正文段落 · 文楷风格 */
 .vp-doc p {
   font-family: var(--font-body);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
   text-indent: var(--paragraph-indent);
   text-align: justify;
-  margin: 0.6em 0;
+  margin: var(--paragraph-margin) 0;
   letter-spacing: 0.02em;
+  color: #333333;
+}
+.dark .vp-doc p {
+  color: #c8c4bc;
 }
 
 /* 标题系列 —— 不缩进，无衬线 */
@@ -213,24 +209,27 @@ body:has(.cinematic-home) {
   letter-spacing: 0.02em;
 }
 
-/* ── 引用块 · 楷体风格 ── */
+/* ── 引用块 · 楷体风格 · 箴言式样式 ── */
 .vp-doc blockquote {
   font-family: var(--font-quote);
   font-style: normal;
-  font-size: 15px;
+  font-size: 1.1em;
   line-height: 1.9;
-  background: var(--color-bg-quote);
+  background: transparent;
   border-left: 3px solid var(--color-accent);
-  border-radius: 0 6px 6px 0;
-  padding: 1.4em 2em;
-  margin: 2em 0;
-  color: var(--vp-c-text-2);
+  padding: 1.2em 0 1.2em 1.5em;
+  margin: 2.5em 0;
+  color: #555555;
+}
+.dark .vp-doc blockquote {
+  color: #a8a4a0;
 }
 .vp-doc blockquote p {
   text-indent: 0;
   font-family: var(--font-quote);
-  font-size: 15px;
+  font-size: 1.1em;
   text-align: left;
+  margin: 0;
 }
 
 /* ── 章节首段首字下沉 ── */
@@ -267,8 +266,10 @@ body:has(.cinematic-home) {
   font-size: 0.9em;
 }
 
-/* ── 图片模糊渐显 ── */
+/* ── 图片模糊渐显 · 带圆角与阴影 ── */
 .vp-doc img {
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: filter 0.5s ease, opacity 0.5s ease;
 }
 .vp-doc img[data-loaded="false"] {
@@ -281,6 +282,12 @@ body:has(.cinematic-home) {
   opacity: 1;
 }
 
+/* 图片与文本间距 */
+.vp-doc p + img,
+.vp-doc img + p {
+  margin-top: 1.5em;
+}
+
 /* ═══════════════════════════════════════════════
    自定义组件样式
    ═══════════════════════════════════════════════ */
@@ -288,14 +295,23 @@ body:has(.cinematic-home) {
 /* ── 章节头部 ── */
 /* 样式已移至 ChapterHeader.vue 组件内 */
 
-/* ── 分隔符 ── */
+/* ── 分隔符 · 设计感增强 ── */
 .divider {
   text-align: center;
-  margin: 2.5em 0;
+  margin: 3em 0;
   color: var(--color-divider);
-  font-size: 1.2em;
-  letter-spacing: 0.5em;
+  font-size: 1.4em;
+  letter-spacing: 0.8em;
   user-select: none;
+  opacity: 0.6;
+}
+
+/* 三点式分割符 */
+.divider-dots::before {
+  content: '• • •';
+  display: block;
+  color: var(--color-divider);
+  letter-spacing: 0.5em;
 }
 
 /* ── 日期标注 ── */
@@ -440,16 +456,30 @@ body:has(.cinematic-home) {
 }
 
 /* ═══════════════════════════════════════════════
-   侧边栏优化
+   侧边栏优化 · 增强层级感
    ═══════════════════════════════════════════════ */
 
+/* 大标题（第一部分·天路） */
 .VPSidebar .group .title {
   font-family: var(--font-heading);
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.8em;
 }
+
+/* 小节标题 */
 .VPSidebarItem .text {
   font-family: var(--font-body);
   font-size: 13px;
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+}
+
+/* 小节标题悬停效果 */
+.VPSidebarItem .text:hover {
+  color: var(--vp-c-text-1);
 }
 
 /* ═══════════════════════════════════════════════
@@ -574,22 +604,22 @@ html {
   z-index: 1;
 }
 
-/* 自定义滚动条用于电影感体验 */
-::-webkit-scrollbar {
+/* 自定义滚动条用于电影感体验 —— 仅限定在 Hero 组件内 */
+.cinematic-hero ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-::-webkit-scrollbar-track {
+.cinematic-hero ::-webkit-scrollbar-track {
   background: #0a0f18;
 }
 
-::-webkit-scrollbar-thumb {
+.cinematic-hero ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #2d4055 0%, #1a2835 100%);
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.cinematic-hero ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #3a506b 0%, #233445 100%);
 }
 
@@ -1282,5 +1312,55 @@ html {
   .read-button {
     padding: 0.9em 2em;
     font-size: 0.95rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   关于页面样式
+   ═══════════════════════════════════════════════ */
+.about-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+  padding: 1.5em;
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+}
+
+.about-page .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-page .stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  line-height: 1;
+}
+
+.about-page .stat-label {
+  font-family: var(--font-quote);
+  font-size: 1.1rem;
+  color: var(--vp-c-text-2);
+  margin: 0.3em 0;
+}
+
+.about-page .stat-desc {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+}
+
+@media (max-width: 768px) {
+  .about-page .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-page .stat-number {
+    font-size: 2rem;
   }
 }

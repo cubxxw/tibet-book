@@ -16,7 +16,6 @@ nextTitle: 七 · 雪城之下
 <script setup>
 import ChapterNav from '../.vitepress/theme/components/ChapterNav.vue'
 import ChapterHeader from '../.vitepress/theme/components/ChapterHeader.vue'
-import Divider from '../.vitepress/theme/components/Divider.vue'
 import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vue'
 import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 import QuoteBlock from '../.vitepress/theme/components/QuoteBlock.vue'
@@ -78,6 +77,20 @@ import PhotoPair from '../.vitepress/theme/components/PhotoPair.vue'
   alt="羊卓雍错山南雪山"
   caption="羊卓雍错，那天离开前的颜色"
 />
+
+<Divider />
+
+## 钟哥
+
+还有钟哥，那个来自广东的小伙。
+
+我们是一起同车进藏的。从成都出发，沿着 318 国道一路向西，全程都是钟哥在开车。
+
+有一次赶夜路，晚上开夜车，那段路我到现在想起来都觉得不可思议——漆黑的山路，没有路灯，对面偶尔有车灯闪过来，钟哥握着方向盘，眼神 steady 得像是在开一条熟悉的城市道路。我坐在副驾，手心有点出汗，但他一直都很放松，偶尔还会说两句笑话。那时候我觉得，这个人是真的牛。
+
+我们相伴走过了开心的 318 旅居，一路上有说有笑，有累有歇。直到拉萨，我们分开了。
+
+她没有带走什么，也没有留下什么，除了那些已经发生过的、无法被带走也无法被留下的东西。
 
 <Divider />
 

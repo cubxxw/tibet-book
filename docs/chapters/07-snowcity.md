@@ -16,7 +16,6 @@ nextTitle: 八 · 仓央嘉措的夜晚
 <script setup>
 import ChapterNav from '../.vitepress/theme/components/ChapterNav.vue'
 import ChapterHeader from '../.vitepress/theme/components/ChapterHeader.vue'
-import Divider from '../.vitepress/theme/components/Divider.vue'
 import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vue'
 import QuoteBlock from '../.vitepress/theme/components/QuoteBlock.vue'
 import PhotoPair from '../.vitepress/theme/components/PhotoPair.vue'
@@ -39,8 +38,8 @@ import PhotoPair from '../.vitepress/theme/components/PhotoPair.vue'
 />
 
 <PhotoPair
-  :left="{src: '/images/lhasa-museum-1.webp', caption: '西藏博物馆展厅，史料与文物并陈'}"
-  :right="{src: '/images/lhasa-museum-2.webp', caption: '西藏博物馆，展柜中陈列的历史文物与档案'}"
+  :left="{src: '/images/lhasa-museum-1.webp', caption: '我和大哥以及小兔子在布达拉宫的合照'}"
+  :right="{src: '/images/lhasa-museum-2.webp', caption: '我和大哥以及小兔子在布达拉宫的合照，右边的是大哥'}"
 />
 
 雪监狱是西藏博物馆里展示的核心内容之一。玻璃展柜里陈列着那些曾经被使用过的刑具。我在那些展柜前站了很长时间，无法很快走开。

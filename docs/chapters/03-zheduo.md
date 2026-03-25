@@ -16,7 +16,6 @@ nextTitle: 四 · 来古冰川与那堆无用的石头
 <script setup>
 import ChapterNav from '../.vitepress/theme/components/ChapterNav.vue'
 import ChapterHeader from '../.vitepress/theme/components/ChapterHeader.vue'
-import Divider from '../.vitepress/theme/components/Divider.vue'
 import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vue'
 import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 import PhotoPair from '../.vitepress/theme/components/PhotoPair.vue'

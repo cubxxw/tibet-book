@@ -16,7 +16,6 @@ nextTitle: 尾声 · 出发的理由
 <script setup>
 import ChapterHeader from '../.vitepress/theme/components/ChapterHeader.vue'
 import ChapterNav from '../.vitepress/theme/components/ChapterNav.vue'
-import Divider from '../.vitepress/theme/components/Divider.vue'
 import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vue'
 import QuoteBlock from '../.vitepress/theme/components/QuoteBlock.vue'
 </script>

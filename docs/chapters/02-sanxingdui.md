@@ -16,7 +16,6 @@ nextTitle: 三 · 折多山，第二次
 <script setup>
 import ChapterNav from '../.vitepress/theme/components/ChapterNav.vue'
 import ChapterHeader from '../.vitepress/theme/components/ChapterHeader.vue'
-import Divider from '../.vitepress/theme/components/Divider.vue'
 import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vue'
 import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 import PhotoPair from '../.vitepress/theme/components/PhotoPair.vue'
