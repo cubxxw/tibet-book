@@ -104,3 +104,37 @@
   - All text uses CSS variables for consistent theming (font-heading, font-quote, colors)
   - Note: Background image path is '/namtso-hero.webp' - needs to be added to public folder
 ---
+
+## 2026-03-25 - US-007
+- Implemented: Created preface and Part 1 chapter Markdown files (US-007)
+- Files changed:
+  - `docs/chapters/preface.md` (rewritten)
+  - `docs/chapters/01-wuhan.md` (created)
+  - `docs/chapters/02-sanxingdui.md` (created)
+  - `docs/chapters/03-zheduo.md` (created)
+  - `docs/chapters/04-glacier.md` (created)
+- Changes made:
+  - All chapters have correct frontmatter (title, chapter, part, partName, date, location, heroImage, prev, next)
+  - All chapters use `<ChapterHeader />` component
+  - All chapters use `<Divider />` for section breaks
+  - All chapters use `<ImageWithCaption />`, `<FullWidthImage />`, `<PhotoGallery />` for images
+  - Image insertion points as specified:
+    - preface.md: 2 image insertion points
+    - 01-wuhan.md: 3 insertion points (double image + gallery × Jiuzhaigou + gallery × pandas)
+    - 02-sanxingdui.md: 3 insertion points (double image + gallery + double image)
+    - 03-zheduo.md: 4 insertion points
+    - 04-glacier.md: 5 insertion points
+  - All chapters have prev/next navigation
+- **Learnings for future iterations:**
+  - Markdown files use `<script setup>` to import Vue components
+  - Frontmatter uses `chapter: N` for chapter number (1-13), `part: N` for part number (1-3)
+  - `partName` displays as chapter header subtitle
+  - `heroImage` is displayed full-width at top of chapter
+  - `excerpt` is displayed as epigraph below chapter header
+  - Image paths use `/images/xxx.webp` format (relative to public folder)
+  - PhotoGallery receives `:images` prop with array of `{ src, alt, caption }`
+  - FullWidthImage supports `:eager="true"` prop for priority loading
+  - Chapter navigation uses frontmatter `prev` and `next` fields
+  - Last chapter (afterword) has `next: false`
+  - First chapter (preface) has `prev: false`
+---
