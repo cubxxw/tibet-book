@@ -28,8 +28,8 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <FullWidthImage
   src="/images/namtso-sunrise.webp"
-  alt "纳木错日出"
-  caption "纳木错的日出，念青唐古拉雪峰在远处"
+  alt="纳木错日出"
+  caption="纳木错的日出，念青唐古拉雪峰在远处"
   :eager="true"
 />
 
@@ -41,14 +41,14 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <ImageWithCaption
   src="/images/namtso-1.webp"
-  alt "纳木错湖岸"
-  caption "纳木错湖畔，经幡在风中飘扬"
+  alt="纳木错湖岸"
+  caption="纳木错湖畔，经幡在风中飘扬"
 />
 
 <ImageWithCaption
   src="/images/namtso-2.webp"
-  alt "纳木错的雪山倒影"
-  caption "纳木错的湖面，倒映着念青唐古拉雪峰"
+  alt="纳木错的雪山倒影"
+  caption="纳木错的湖面，倒映着念青唐古拉雪峰"
 />
 
 ## 扎西半岛
@@ -59,8 +59,8 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <FullWidthImage
   src="/images/namtso-peninsula.webp"
-  alt "扎西半岛全景"
-  caption "扎西半岛，纳木错最著名的景点"
+  alt="扎西半岛全景"
+  caption="扎西半岛，纳木错最著名的景点"
   :eager="true"
 />
 
@@ -72,14 +72,14 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <ImageWithCaption
   src="/images/namtso-4.webp"
-  alt "纳木错湖畔的玛尼堆"
-  caption "湖畔的玛尼堆，每一块石头都是一次祈祷"
+  alt="纳木错湖畔的玛尼堆"
+  caption="湖畔的玛尼堆，每一块石头都是一次祈祷"
 />
 
 <ImageWithCaption
   src="/images/namtso-5.webp"
-  alt "纳木错的黄昏"
-  caption "纳木错的黄昏，湖面泛起金色的波光"
+  alt="纳木错的黄昏"
+  caption="纳木错的黄昏，湖面泛起金色的波光"
 />
 
 有些东西，是不需要语言来解释的。你看到它，就懂了。

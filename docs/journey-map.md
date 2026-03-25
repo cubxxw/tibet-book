@@ -4,7 +4,7 @@ layout: page
 ---
 
 <script setup>
-import Divider from '../.vitepress/theme/components/Divider.vue'
+import Divider from './.vitepress/theme/components/Divider.vue'
 </script>
 
 # 旅程地图

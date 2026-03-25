@@ -28,7 +28,7 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 <ImageWithCaption
   src="/images/road-to-lhasa-1.webp"
   alt="川藏公路"
-  caption "川藏公路，通向拉萨的天路"
+  caption="川藏公路，通向拉萨的天路"
 />
 
 ## 布达拉宫
@@ -41,8 +41,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/potala-1.webp"
-  alt "布达拉宫远景"
-  caption "第一次看到布达拉宫，是在傍晚六点"
+  alt="布达拉宫远景"
+  caption="第一次看到布达拉宫，是在傍晚六点"
 />
 
 ## 八廓街的黄昏
@@ -53,8 +53,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/barkhor-1.webp"
-  alt "八廓街转经的人流"
-  caption "八廓街的黄昏，转经的人流"
+  alt="八廓街转经的人流"
+  caption="八廓街的黄昏，转经的人流"
 />
 
 ## 第一晚
@@ -65,8 +65,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/lhasa-night-1.webp"
-  alt "拉萨夜景"
-  caption "拉萨的夜，布达拉宫在月光下"
+  alt="拉萨夜景"
+  caption="拉萨的夜，布达拉宫在月光下"
 />
 
 <Divider />

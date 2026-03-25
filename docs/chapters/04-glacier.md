@@ -32,7 +32,7 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 <ImageWithCaption
   src="/images/glacier-1.webp"
   alt="来古冰川日出"
-  caption "来古冰川的日出，海拔 4600 米"
+  caption="来古冰川的日出，海拔 4600 米"
 />
 
 ## 冰川
@@ -62,8 +62,8 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 
 <ImageWithCaption
   src="/images/glacier-2.webp"
-  alt "冰川脚下的石头"
-  caption "冰川脚下的石头，被千万年的水流冲刷"
+  alt="冰川脚下的石头"
+  caption="冰川脚下的石头，被千万年的水流冲刷"
 />
 
 我蹲下来，挑了一块，放进口袋。
@@ -81,7 +81,7 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 <ImageWithCaption
   src="/images/glacier-3.webp"
   alt="手中的石头"
-  caption "这块石头后来一直放在我的书桌上"
+  caption="这块石头后来一直放在我的书桌上"
 />
 
 ## 无用的意义
@@ -118,7 +118,7 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 <ImageWithCaption
   src="/images/glacier-4.webp"
   alt="离开来古冰川"
-  caption "离开来古冰川，继续向拉萨前进"
+  caption="离开来古冰川，继续向拉萨前进"
 />
 
 <Divider />

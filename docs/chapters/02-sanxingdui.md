@@ -78,7 +78,7 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 <ImageWithCaption
   src="/images/sanxingdui-4.webp"
   alt="三星堆博物馆外观"
-  caption "离开三星堆，继续向西"
+  caption="离开三星堆，继续向西"
 />
 
 但心里莫名地踏实。也许是因为，在三星堆的那两个小时，让我觉得自己和这片土地的历史产生了某种联系。接下来的路，不再是盲目的奔赴，而是带着某种使命感的前行。

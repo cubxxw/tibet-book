@@ -27,8 +27,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/teahouse-1.webp"
-  alt "光明港琼甜茶馆内景"
-  caption "光明港琼甜茶馆，拉萨最老的甜茶馆之一"
+  alt="光明港琼甜茶馆内景"
+  caption="光明港琼甜茶馆，拉萨最老的甜茶馆之一"
 />
 
 ## 拉漂众生相
@@ -41,8 +41,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/lhasa-cityview-2.webp"
-  alt "拉萨城市远景"
-  caption "从甜茶馆的窗户望出去，能看到拉萨的城市轮廓"
+  alt="拉萨城市远景"
+  caption="从甜茶馆的窗户望出去，能看到拉萨的城市轮廓"
 />
 
 <Divider />

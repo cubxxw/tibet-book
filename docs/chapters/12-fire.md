@@ -27,8 +27,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/lhasa-museum-4.webp"
-  alt "西藏博物馆外景"
-  caption "西藏博物馆，记录着这片土地的变迁"
+  alt="西藏博物馆外景"
+  caption="西藏博物馆，记录着这片土地的变迁"
 />
 
 ## 历史的见证
@@ -39,8 +39,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/lhasa-museum-6.webp"
-  alt "民主改革历史照片"
-  caption "1959 年民主改革前的拉萨老城区"
+  alt="民主改革历史照片"
+  caption="1959 年民主改革前的拉萨老城区"
 />
 
 <Divider />

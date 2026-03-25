@@ -3,9 +3,9 @@ layout: home
 ---
 
 <script setup>
-import ChapterHeader from '../.vitepress/theme/components/ChapterHeader.vue'
-import QuoteBlock from '../.vitepress/theme/components/QuoteBlock.vue'
-import Divider from '../.vitepress/theme/components/Divider.vue'
+import ChapterHeader from './.vitepress/theme/components/ChapterHeader.vue'
+import QuoteBlock from './.vitepress/theme/components/QuoteBlock.vue'
+import Divider from './.vitepress/theme/components/Divider.vue'
 </script>
 
 <div class="homepage">

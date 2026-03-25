@@ -47,7 +47,7 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 <ImageWithCaption
   src="/images/milk-tea.webp"
   alt="茶颜悦色幽兰拿铁"
-  caption "在机场买的最后一杯茶颜悦色"
+  caption="在机场买的最后一杯茶颜悦色"
 />
 
 ## 关于九寨的意外
@@ -88,7 +88,7 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 <ImageWithCaption
   src="/images/chengdu-hotpot.webp"
   alt="成都火锅"
-  caption "到成都的第一顿，一个人吃火锅"
+  caption="到成都的第一顿，一个人吃火锅"
 />
 
 ## 熊猫基地的清晨
@@ -98,13 +98,13 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 <ImageWithCaption
   src="/images/panda-1.webp"
   alt="大熊猫吃竹子"
-  caption "终于看到了心心念念的大熊猫"
+  caption="终于看到了心心念念的大熊猫"
 />
 
 <ImageWithCaption
   src="/images/panda-2.webp"
   alt="小熊猫在树上睡觉"
-  caption "这只小熊猫全程都在睡觉"
+  caption="这只小熊猫全程都在睡觉"
 />
 
 <PhotoGallery

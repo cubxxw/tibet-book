@@ -29,22 +29,22 @@ import PhotoGallery from '../.vitepress/theme/components/PhotoGallery.vue'
 
 <ImageWithCaption
   src="/images/sera-1.webp"
-  alt "色拉寺全景"
-  caption "色拉寺，拉萨三大寺之一"
+  alt="色拉寺全景"
+  caption="色拉寺，拉萨三大寺之一"
 />
 
 <ImageWithCaption
   src="/images/sera-2.webp"
-  alt "色拉寺的喇嘛"
-  caption "参加法会的喇嘛们"
+  alt="色拉寺的喇嘛"
+  caption="参加法会的喇嘛们"
 />
 
 ## 馈赠
 
 <FullWidthImage
   src="/images/sera-offering.webp"
-  alt "色拉寺的供品"
-  caption "寺庙里的供品，每一样都是信徒的心意"
+  alt="色拉寺的供品"
+  caption="寺庙里的供品，每一样都是信徒的心意"
   :eager="true"
 />
 

@@ -27,8 +27,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/jokhang-temple-1.webp"
-  alt "大昭寺金顶"
-  caption "大昭寺的金顶，在晨光中闪闪发光"
+  alt="大昭寺金顶"
+  caption="大昭寺的金顶，在晨光中闪闪发光"
 />
 
 ## 仓央嘉措
@@ -41,8 +41,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/jokhang-temple-2.webp"
-  alt "仓央嘉措诗歌展"
-  caption "仓央嘉措诗歌展，三百年前的情诗依然动人"
+  alt="仓央嘉措诗歌展"
+  caption="仓央嘉措诗歌展，三百年前的情诗依然动人"
 />
 
 ## 写在路上

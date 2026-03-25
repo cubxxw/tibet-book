@@ -31,7 +31,7 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 <ImageWithCaption
   src="/images/zheduo-1.webp"
   alt="折多山垭口"
-  caption "折多山垭口，海拔 4298 米"
+  caption="折多山垭口，海拔 4298 米"
 />
 
 ## 第二次
@@ -54,8 +54,8 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <ImageWithCaption
   src="/images/zheduo-2.webp"
-  alt "折多山经幡"
-  caption "风马旗在风中飘扬，每一面经幡都是一次祈祷"
+  alt="折多山经幡"
+  caption="风马旗在风中飘扬，每一面经幡都是一次祈祷"
 />
 
 ## 风景在路上
@@ -88,7 +88,7 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 <ImageWithCaption
   src="/images/litang-night.webp"
   alt="理塘夜景"
-  caption "理塘的夜，世界高城"
+  caption="理塘的夜，世界高城"
 />
 
 <Divider />

@@ -27,8 +27,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/shannan-snow-1.webp"
-  alt "雪后的布达拉宫"
-  caption "雪后的布达拉宫，比平时更加肃穆"
+  alt="雪后的布达拉宫"
+  caption="雪后的布达拉宫，比平时更加肃穆"
 />
 
 ## 山南的湖
@@ -39,8 +39,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/shannan-lake-1.webp"
-  alt "山南的湖泊"
-  caption "山南的湖泊，在雪后显得格外宁静"
+  alt="山南的湖泊"
+  caption="山南的湖泊，在雪后显得格外宁静"
 />
 
 ## 羊卓雍措
@@ -53,8 +53,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/shannan-lake-3.webp"
-  alt "羊卓雍措雪景"
-  caption "羊卓雍措，西藏三大圣湖之一"
+  alt="羊卓雍措雪景"
+  caption="羊卓雍措，西藏三大圣湖之一"
 />
 
 <Divider />

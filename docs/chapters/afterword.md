@@ -29,8 +29,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/lhasa-memory-final-1.webp"
-  alt "从拉萨带回来的纪念品"
-  caption "从拉萨带回来的东西，每一样都有故事"
+  alt="从拉萨带回来的纪念品"
+  caption="从拉萨带回来的东西，每一样都有故事"
 />
 
 ## 感谢
@@ -45,8 +45,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/lhasa-memory-final-2.webp"
-  alt "旅途中的朋友"
-  caption "有些相遇，只有一次，但足以温暖余生"
+  alt="旅途中的朋友"
+  caption="有些相遇，只有一次，但足以温暖余生"
 />
 
 <Divider />

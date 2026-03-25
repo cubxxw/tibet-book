@@ -225,3 +225,29 @@
   - Lhasa (拉萨) highlighted as the main destination with brand color
   - Note about future Mapbox integration for interactive GPS轨迹 display
 ---
+
+## 2026-03-25 - US-012
+- Implemented: Deleted old chapter files and verified site build
+- Files deleted:
+  - docs/chapters/01-arrival.md (replaced by 01-wuhan.md)
+  - docs/chapters/02-adaptation.md (old structure)
+  - docs/chapters/03-daily-life.md (old structure)
+  - docs/chapters/04-temples.md (old structure)
+  - docs/chapters/05-people.md (old structure)
+  - docs/chapters/06-time.md (old structure)
+  - docs/chapters/07-belief.md (old structure)
+  - docs/chapters/08-modernity.md (old structure)
+  - docs/chapters/09-kora.md (old structure)
+- Files fixed:
+  - All chapter files: Fixed `alt "` → `alt="` and `caption "` → `caption="` syntax
+  - Vue components: Added `lang="ts"` to all components with TypeScript defineProps
+  - docs/about.md, docs/journey-map.md, docs/index.md: Fixed import paths
+- Build verification:
+  - `pnpm build` passes successfully
+  - `npx tsc --noEmit` passes successfully
+- **Learnings for future iterations:**
+  - Vue 3 components with TypeScript defineProps need `lang="ts"` attribute
+  - VitePress import paths from docs root should use `./.vitepress/...` not `../.vitepress/...`
+  - HTML attributes in Vue components must use `=` (e.g., `alt="..."` not `alt "..."`)
+  - Build warns about missing image `/namtso-hero.webp` - needs to be added to public folder
+---

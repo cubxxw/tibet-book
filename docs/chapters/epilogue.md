@@ -27,8 +27,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/flight-view.webp"
-  alt "从飞机上俯瞰拉萨"
-  caption "从飞机上最后一次看拉萨，雪山在云层中若隐若现"
+  alt="从飞机上俯瞰拉萨"
+  caption="从飞机上最后一次看拉萨，雪山在云层中若隐若现"
 />
 
 ## 为什么出发

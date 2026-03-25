@@ -28,14 +28,14 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <ImageWithCaption
   src="/images/drepung-1.webp"
-  alt "哲蚌寺全景"
-  caption "哲蚌寺全景，白色的建筑群像堆积的米堆"
+  alt="哲蚌寺全景"
+  caption="哲蚌寺全景，白色的建筑群像堆积的米堆"
 />
 
 <ImageWithCaption
   src="/images/drepung-2.webp"
-  alt "哲蚌寺的僧舍"
-  caption "密密麻麻的僧舍，每个房间都曾住过求法的僧人"
+  alt="哲蚌寺的僧舍"
+  caption="密密麻麻的僧舍，每个房间都曾住过求法的僧人"
 />
 
 ## 辩经
@@ -48,8 +48,8 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <FullWidthImage
   src="/images/drepung-debate.webp"
-  alt "哲蚌寺辩经"
-  caption "哲蚌寺的辩经场，僧人们正在进行激烈的辩论"
+  alt="哲蚌寺辩经"
+  caption="哲蚌寺的辩经场，僧人们正在进行激烈的辩论"
   :eager="true"
 />
 
@@ -61,14 +61,14 @@ import FullWidthImage from '../.vitepress/theme/components/FullWidthImage.vue'
 
 <ImageWithCaption
   src="/images/drepung-3.webp"
-  alt "哲蚌寺的唐卡"
-  caption "哲蚌寺保存的千年唐卡，色彩依然鲜艳"
+  alt="哲蚌寺的唐卡"
+  caption="哲蚌寺保存的千年唐卡，色彩依然鲜艳"
 />
 
 <ImageWithCaption
   src="/images/drepung-5.webp"
-  alt "哲蚌寺的经书"
-  caption "古老的经书，每一页都是智慧的传承"
+  alt="哲蚌寺的经书"
+  caption="古老的经书，每一页都是智慧的传承"
 />
 
 每一次辩论，都是在剥离错误的认知，接近事物的本质。每一次思考，都是在放下执念，获得解脱。

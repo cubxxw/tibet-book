@@ -34,7 +34,7 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 <ImageWithCaption
   src="/images/lhasa-museum-1.webp"
   alt="西藏博物馆"
-  caption "西藏博物馆，了解这片土地最好的地方"
+  caption="西藏博物馆，了解这片土地最好的地方"
 />
 
 <Divider />
@@ -47,8 +47,8 @@ import ImageWithCaption from '../.vitepress/theme/components/ImageWithCaption.vu
 
 <ImageWithCaption
   src="/images/lhasa-museum-3.webp"
-  alt "博物馆内的唐卡展览"
-  caption "博物馆内的唐卡展览，每一幅都是千年的传承"
+  alt="博物馆内的唐卡展览"
+  caption="博物馆内的唐卡展览，每一幅都是千年的传承"
 />
 
 ## 写在路上
