@@ -32,3 +32,18 @@
   - blockquote uses 楷体 (STKaiti/KaiTi) with warm background color
   - Typecheck passes with no errors
 ---
+
+## 2026-03-25 - US-003
+- Implemented: ChapterHeader.vue component fixes for US-003 compliance
+- Files changed:
+  - `docs/.vitepress/theme/components/ChapterHeader.vue` (updated)
+- Changes made:
+  - Added `fetchpriority="high"` to hero image (was missing)
+  - Added `text-align: right` and `font-style: italic` to `.chapter-meta` for date/location right-alignment
+- **Learnings for future iterations:**
+  - ChapterHeader uses `useData()` from vitepress to access frontmatter
+  - Chinese chapter numbering uses array lookup: `['一','二',...][frontmatter.chapter - 1]`
+  - Component reads: title, chapter, part, partName, date, location, heroImage, excerpt
+  - Hero image uses `loading="eager"` and `fetchpriority="high"` for performance
+  - Date/location displayed right-aligned in italic 楷体 style
+---
