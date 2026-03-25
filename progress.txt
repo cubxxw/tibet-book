@@ -206,3 +206,22 @@
   - Contact section includes GitHub and email placeholders
   - Page ends with the book's core philosophy quote
 ---
+
+## 2026-03-25 - US-011
+- Implemented: Created docs/journey-map.md journey map page (static version)
+- Files created:
+  - `docs/journey-map.md` (new)
+- Changes made:
+  - Created journey text timeline with all 14 stops
+  - Each node includes: city name, province, chapter link
+  - Added journey statistics display (37 days, 7354 km, 39 stops, 4 months)
+  - Added note about interactive map coming when GPS data is ready
+  - Styled with CSS for responsive timeline and stats grid
+- **Learnings for future iterations:**
+  - Journey map uses `layout: page` frontmatter
+  - Timeline uses flexbox column layout with hover effects
+  - Each timeline item is a link to corresponding chapter
+  - Start point (武汉) has green accent, end point (重庆) has red accent
+  - Lhasa (拉萨) highlighted as the main destination with brand color
+  - Note about future Mapbox integration for interactive GPS轨迹 display
+---
