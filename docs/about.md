@@ -117,7 +117,7 @@ pageClass: about-page
     <span class="ack-icon">❤️</span>
     <div class="ack-content">
       <strong>小兔子</strong>
-      <p>在我最犹豫的时候说："想去就去，工作可以等等，但青春不能。"没有你的鼓励，不会有这段旅程。</p>
+      <p>算是拉萨的引路人，"拉萨有藏族新年！"</p>
     </div>
   </div>
   <div class="ack-item">
