@@ -162,3 +162,26 @@
   - Some chapters intentionally minimal (06-farewell) for emotional effect
   - Consistent pattern: each chapter ends with [上一章：← ...](./prev) | [下一章：... →](./next)
 ---
+
+## 2026-03-25 - US-009
+- Implemented: Created Part 3 and ending chapter Markdown files
+- Files created:
+  - `docs/chapters/12-fire.md` (2 image points, minimalist)
+  - `docs/chapters/13-gifts.md` (3 points: double + full-width + gallery)
+  - `docs/chapters/epilogue.md` (1 image point)
+  - `docs/chapters/afterword.md` (no heroImage, 1 ending double-image point)
+- All chapters include:
+  - Correct frontmatter (title, chapter, part, partName, date, location, heroImage, prev, next)
+  - `<ChapterHeader />` component
+  - `<Divider />` for section breaks
+  - Appropriate image components
+  - Chapter navigation (afterword has `next: false`)
+- **Learnings for future iterations:**
+  - Part 3 "减法" covers reflection and departure chapters
+  - 12-fire.md uses minimalist approach (2 images) for serious historical content
+  - 13-gifts.md uses PhotoGallery for memory montage at chapter end
+  - Epilogue uses aerial view from airplane as hero image
+  - Afterword has no heroImage (heroImage: false), appropriate for closing thoughts
+  - afterword.md `next: false` since it's the last chapter
+  - Consistent closing pattern: [上一章：← ...](./prev) for last chapter
+---
