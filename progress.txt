@@ -21,3 +21,14 @@
   - CSS imports need `declare module '*.css'` for typecheck to pass
   - Use `npx tsc --noEmit` for type checking before commits
 ---
+
+## 2026-03-25 - US-002
+- Implemented: Verified custom theme entry (index.ts) and global CSS (custom.css) with Tibetan-inspired design system
+- Files changed: None (already existed and met all acceptance criteria)
+- **Learnings for future iterations:**
+  - custom.css already contains all required CSS variables (--font-body, --font-heading, --font-quote)
+  - Typography variables correctly set (--font-size-body: 16.5px, --line-height-body: 2, --content-max-width: 680px)
+  - Dark mode variables defined in `.dark` selector
+  - blockquote uses 楷体 (STKaiti/KaiTi) with warm background color
+  - Typecheck passes with no errors
+---
