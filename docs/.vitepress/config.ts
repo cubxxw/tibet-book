@@ -1,15 +1,31 @@
 import { defineConfig } from 'vitepress'
 
+const HOSTNAME = 'https://tibet.cubxxw.com'
+const SITE_NAME = '减法之地'
+const DEFAULT_OG_IMAGE = '/namtso-hero.webp'
+
+/** Absolute URL for a VitePress page path, e.g. "chapters/09-drepung.md". */
+function pageUrl(relativePath: string): string {
+  const path = relativePath.replace(/(index)?\.md$/, '').replace(/\/$/, '')
+  return path ? `${HOSTNAME}/${path}` : `${HOSTNAME}/`
+}
+
 export default defineConfig({
   lang: 'zh-CN',
-  title: '减法之地',
-  titleTemplate: ':title — 减法之地',
+  title: SITE_NAME,
+  titleTemplate: `:title — ${SITE_NAME}`,
   description: '川西入藏·拉萨旅居手记 | 37天 7354公里的非虚构旅居记录',
 
+  lastUpdated: true,
+  cleanUrls: true,
+  sitemap: { hostname: HOSTNAME },
+
   head: [
-    ['meta', { property: 'og:title', content: '减法之地' }],
-    ['meta', { property: 'og:description', content: '川西入藏·拉萨旅居手记' }],
     ['meta', { property: 'og:type', content: 'book' }],
+    ['meta', { property: 'og:site_name', content: SITE_NAME }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'author', content: '鑫伟 (cubxxw)' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', {
@@ -17,6 +33,63 @@ export default defineConfig({
       rel: 'stylesheet',
     }],
   ],
+
+  // Per-page canonical / OG / structured data, driven by chapter frontmatter.
+  transformPageData(pageData) {
+    const fm = pageData.frontmatter
+    const url = pageUrl(pageData.relativePath)
+    const title = fm.title ? `${fm.title} — ${SITE_NAME}` : SITE_NAME
+    const description = fm.excerpt || fm.description || '川西入藏·拉萨旅居手记 | 37天 7354公里的非虚构旅居记录'
+    const image = HOSTNAME + (fm.heroImage || DEFAULT_OG_IMAGE)
+
+    // Set description here rather than pushing a <meta> tag: VitePress renders
+    // the site-level description first, and the earlier tag is the one that wins.
+    pageData.description = description
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:image', content: image }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: image }],
+    )
+
+    // Chapters are Article nodes; everything else inherits the site-level Book.
+    if (fm.chapter) {
+      if (fm.date) {
+        pageData.frontmatter.head.push(
+          ['meta', { property: 'article:published_time', content: new Date(fm.date).toISOString() }],
+        )
+      }
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: fm.title,
+          description,
+          image,
+          url,
+          inLanguage: 'zh-CN',
+          author: { '@type': 'Person', name: '鑫伟 (cubxxw)' },
+          ...(fm.date && { datePublished: new Date(fm.date).toISOString() }),
+          ...(fm.location && {
+            contentLocation: { '@type': 'Place', name: fm.location },
+          }),
+          isPartOf: {
+            '@type': 'Book',
+            name: SITE_NAME,
+            url: `${HOSTNAME}/`,
+          },
+        }),
+      ])
+    }
+  },
 
   themeConfig: {
     nav: [

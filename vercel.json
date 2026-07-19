@@ -5,12 +5,8 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "vitepress",
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/:path*/index.html"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/(.*)",
